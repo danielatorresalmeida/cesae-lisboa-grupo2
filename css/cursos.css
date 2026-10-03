@@ -1,8 +1,13 @@
+/*Fixar a navbar */
+.navbar {
+    z-index: 1030;
+}
+
 /* Botão de pesquisa */
 .purple {
-    background-color: #7426aa;
+    background-color: #7B2CBF;
     color: white;
-    border-color: #7426aa;
+    border-color: #7B2CBF;
 
 }
 
