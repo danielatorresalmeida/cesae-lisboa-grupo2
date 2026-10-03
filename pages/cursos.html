@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cursos</title>
+
+    <link rel="icon" href="/images/icons/favicon.png" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS próprio -->
+    <link rel="stylesheet" href="/css/cursos.css">
 </head>
+
 <body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-md bg-light px-4">
+        <div class="container-fluid">
+
+            <!-- Logótipo -->
+            <a class="navbar-brand" href="/index.html">
+                <img src="/images/cesae-digital-logo.svg" alt="CESAE Digital" width="140" height="50">
+            </a>
+
+            <!-- Botão hamburguer -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu, links e pesquisa -->
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/parceiros.html">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/contactos.html">Contactos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/cursos.html">Cursos</a>
+                    </li>
+                </ul>
+
+                <!-- Pesquisa -->
+                <form class="search-form d-flex" role="search">
+                    <input class="form-control rounded-pill" type="search" placeholder="Pesquisar"
+                        aria-label="Pesquisar">
+
+                    <button class="btn purple rounded-pill" type="submit">
+                        Pesquisar
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Fim da Barra de Navegação -->
+
     
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
