@@ -1,0 +1,126 @@
+:root {
+  --primary: #b7a1e8;
+  --primary-dark: #7863b5;
+  --accent: #d9ccf3;
+  --ink: #29243a;
+  --background: #f7f5fc;
+  --surface: #ffffff;
+}
+body {
+  background: var(--background);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+.navbar {
+  background: var(--surface);
+  box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
+}
+.navbar-brand {
+  color: var(--primary-dark);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.nav-link {
+  color: var(--ink);
+  font-weight: 500;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-dark) !important;
+}
+.btn-brand {
+  background: var(--primary-dark);
+  color: white;
+  border: 1px solid var(--primary-dark);
+  border-radius: 9px;
+  padding: 0.65rem 1.3rem;
+}
+.btn-brand:hover {
+  background: #63519c;
+  color: white;
+}
+.page-header {
+  padding: 4.5rem 0 2.5rem;
+  text-align: center;
+}
+.page-header h1 {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+.page-header p {
+  max-width: 680px;
+  margin: auto;
+  color: #605a70;
+}
+.eyebrow {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 0.25rem 0.85rem;
+  border-radius: 99px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.section-heading {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+.partner-card {
+  background: var(--surface);
+  border: 1px solid #e9e4f4;
+  border-radius: 14px;
+  height: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 5px 18px rgba(41, 36, 58, 0.035);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.partner-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 24px rgba(41, 36, 58, 0.09);
+}
+.logo-box {
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.logo-box img {
+  width: 100%;
+  max-width: 210px;
+  height: 105px;
+  object-fit: contain;
+}
+.partner-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.partner-card p {
+  font-size: 0.94rem;
+  color: #605a70;
+  margin-bottom: 0;
+}
+.section-block {
+  padding: 1.5rem 0 2.5rem;
+}
+footer {
+  background: var(--surface);
+  border-top: 1px solid #e9e4f4;
+  color: #605a70;
+}
+@media (max-width: 575px) {
+  .page-header {
+    padding: 3rem 0 1.5rem;
+  }
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+}
