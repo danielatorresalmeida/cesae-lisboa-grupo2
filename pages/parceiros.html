@@ -1,14 +1,293 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parceirias</title>
-</head>
-<body>
-    <h1>Parceiros e Certificações</h1>
-    <p>Conheça as entidades e organizações que contribuem para a formação e certificação profissional.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parceiros e Certificações | CESAE Digital</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    
-</body>
+    <!-- bootstrap-icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/parceiros.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="../images/icons/cesae-digital-logo.png"
+            alt="CESAE Digital"
+            class="logo-cesae"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cursos.html">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="parceiros.html"
+                >Parceiros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+            </li>
+            
+<li class="nav-item">
+    <a class="btn-login ms-lg-2 mt-2 mt-lg-0"
+       href="login.html"
+       aria-label="Iniciar sessão">
+        <i class="bi bi-person"></i>
+    </a>
+</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container pb-5">
+      <header class="page-header">
+        <span class="eyebrow">A NOSSA REDE</span>
+        <h1>Parceiros e Certificações</h1>
+        <p>
+          Conheça as entidades e organizações que contribuem para a formação e
+          certificação profissional.
+        </p>
+      </header>
+      <section class="section-block" aria-labelledby="partners-title">
+        <h2 class="section-heading" id="partners-title">Parceiros</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/sage-logo.png"
+                  alt="Logótipo da Sage"
+                />
+              </div>
+              <h3>Sage</h3>
+              <p>
+                Empresa especializada em soluções de gestão empresarial,
+                contabilidade e recursos humanos.
+              </p>
+
+              <a
+                href="https://www.sage.com/pt-pt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-brand"
+                >Visite a Sage</a
+              >
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/aep-logo.png"
+                  alt="Logótipo da AEP"
+                />
+              </div>
+              <h3>AEP</h3>
+              <p>
+                Associação que promove o desenvolvimento empresarial, a
+                competitividade e a qualificação profissional.
+              </p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.aeportugal.pt/"
+              >
+                Visite a AEP
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-block" aria-labelledby="certifications-title">
+        <h2 class="section-heading" id="certifications-title">
+          Certificações e Tecnologias
+        </h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/pearson-vue-logo.png"
+                  alt="Logótipo da Pearson VUE"
+                />
+              </div>
+              <h3>Pearson VUE</h3>
+              <p>
+                Plataforma internacional de exames e certificações
+                profissionais.
+              </p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.pearsonvue.com/"
+              >
+                Visite a Pearson VUE
+              </a>
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/cisco-logo.jpg"
+                  alt="Logótipo da Cisco"
+                />
+              </div>
+              <h3>Cisco</h3>
+              <p>Certificações em redes, infraestrutura e cibersegurança.</p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.cisco.com/"
+              >
+                Visite a Cisco
+              </a>
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/kryterium-logo.jpg"
+                  alt="Logótipo da Kryterion"
+                />
+              </div>
+              <h3>Kryterion</h3>
+              <p>
+                Plataforma de avaliação e realização de exames de certificação.
+              </p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.kryterion.com/"
+              >
+                Visite a Kryterion
+              </a>
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/measure-logo.jpg"
+                  alt="Logótipo da Meazure Learning"
+                />
+              </div>
+              <h3>Meazure Learning</h3>
+              <p>Soluções de avaliação e gestão de exames profissionais.</p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.meazurelearning.com/"
+              >
+                Visite a Meazure Learning
+              </a>
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/autodesk-logo.jpg"
+                  alt="Logótipo da Autodesk"
+                />
+              </div>
+              <h3>Autodesk</h3>
+              <p>
+                Software e certificações para áreas como arquitetura, engenharia
+                e design.
+              </p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.autodesk.com/"
+              >
+                Visite a Autodesk
+              </a>
+            </article>
+          </div>
+          <div class="col">
+            <article class="partner-card">
+              <div class="logo-box">
+                <img
+                  src="../images/parceiros/aws-logo.jpg"
+                  alt="Logótipo da AWS"
+                />
+              </div>
+              <h3>AWS</h3>
+              <p>
+                Soluções de nuvem e certificações para desenvolvimento e
+                operação em ambientes cloud.
+              </p>
+              <a
+                class="btn btn-brand"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://aws.amazon.com/"
+              >
+                Visite a AWS
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-cesae text-white py-4 mt-5">
+      <div class="container">
+        <div class="row g-3 align-items-center">
+          <div class="col-12 col-md-7 text-center text-md-start">
+            <strong>CESAE Digital</strong>
+            <p class="small mb-0 mt-1">
+              Projeto académico · Grupo 2 · Web Client
+            </p>
+          </div>
+          <div class="col-12 col-md-5 text-center text-md-end">
+            <a class="footer-link me-3" href="mailto:geral@cesae.pt"
+              >geral@cesae.pt</a
+            >
+            <a class="footer-link" href="tel:+351226195200">226 195 200</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
