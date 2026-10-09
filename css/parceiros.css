@@ -1,7 +1,5 @@
 
-/* ========================================
-   1. CORES DO SITE
-======================================== */
+/* cores do site */
 
 :root {
   --primary: #7B2CBF;
@@ -13,9 +11,7 @@
 }
 
 
-/* ========================================
-   2. ESTILOS GERAIS
-======================================== */
+/* estilos gerais */
 
 body {
   background: var(--background);
@@ -25,10 +21,7 @@ body {
 }
 
 
-/* ========================================
-   3. NAVBAR
-======================================== */
-
+/* navbar */
 .navbar {
   background: var(--surface);
   box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
@@ -66,10 +59,6 @@ body {
 }
 
 
-/* ========================================
-   4. BOTÕES
-======================================== */
-
 /* Botões principais */
 
 .btn-brand {
@@ -106,9 +95,7 @@ body {
 }
 
 
-/* ========================================
-   5. CABEÇALHO DA PÁGINA
-======================================== */
+/* cabecalho da pagina */
 
 .page-header {
   padding: 4.5rem 0 2.5rem;
@@ -126,7 +113,7 @@ body {
   color: #605a70;
 }
 
-/* Etiqueta "A NOSSA REDE" */
+/* etiqueta "A NOSSA REDE" */
 
 .eyebrow {
   display: inline-block;
@@ -140,9 +127,7 @@ body {
 }
 
 
-/* ========================================
-   6. SECÇÕES
-======================================== */
+/* secçoes */
 
 .section-heading {
   font-size: 1.55rem;
@@ -155,10 +140,7 @@ body {
 }
 
 
-/* ========================================
-   7. CARTÕES DOS PARCEIROS
-======================================== */
-
+/* parceiros */
 .partner-card {
   background: var(--surface);
   border: 1px solid #e5d8ef;
@@ -183,7 +165,7 @@ body {
   box-shadow: 0 9px 24px rgba(41, 36, 58, 0.09);
 }
 
-/* Área dos logótipos */
+/* area dos logotipos */
 
 .logo-box {
   height: 155px;
@@ -203,7 +185,7 @@ body {
   object-fit: contain;
 }
 
-/* Títulos e descrições */
+/* titulos e descricoes */
 
 .partner-card h3 {
   font-size: 1.05rem;
@@ -217,9 +199,7 @@ body {
 }
 
 
-/* ========================================
-   8. FOOTER
-======================================== */
+/* footer */
 
 footer {
   background-color: #321448;
@@ -240,9 +220,7 @@ footer {
 }
 
 
-/* ========================================
-   9. RESPONSIVIDADE
-======================================== */
+/* responsividade */
 
 @media (max-width: 575px) {
 
