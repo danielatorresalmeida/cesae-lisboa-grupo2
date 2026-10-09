@@ -11,6 +11,7 @@ body {
   color: var(--ink);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
+
 }
 .navbar {
   background: var(--surface);
@@ -110,7 +111,9 @@ body {
 }
 .section-block {
   padding: 1.5rem 0 2.5rem;
+
 }
+
 footer {
   background: var(--surface);
   border-top: 1px solid #e9e4f4;
