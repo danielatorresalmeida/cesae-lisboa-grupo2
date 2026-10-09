@@ -3,6 +3,12 @@
     z-index: 1030;
 }
 
+/* Estilo para o link do menu "Cursos" */
+.nav-link#cursos {
+    color: #7426aa;
+    border-bottom: 2px solid #7426aa;
+}
+
 /* Botão de pesquisa */
 .purple {
     background-color: #7B2CBF;
@@ -11,11 +17,12 @@
 
 }
 
-.btn-purple:hover {
+/* Hover Botao Ver Curso */
+ .btn:hover{
     background-color: #581985;
     color: white;
-    border-color: #45116b;
-}
+    border-color: #45116b;}
+
 
 /* Formulário de pesquisa */
 .search-form {
