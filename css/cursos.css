@@ -1,0 +1,63 @@
+/*Fixar a navbar */
+.navbar {
+    z-index: 1030;
+}
+
+/* Estilo para o link do menu "Cursos" */
+.nav-link#cursos {
+    color: #7426aa;
+    border-bottom: 2px solid #7426aa;
+}
+
+/* Botão de pesquisa */
+.purple {
+    background-color: #7B2CBF;
+    color: white;
+    border-color: #7B2CBF;
+
+}
+
+/* Hover Botao Ver Curso */
+ .btn:hover{
+    background-color: #581985;
+    color: white;
+    border-color: #45116b;}
+
+
+/* Formulário de pesquisa */
+.search-form {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.search-form input {
+    flex: 1;
+}
+
+/* Efeito hover nos links */
+#menu .nav-link:hover {
+    color: #7426aa;
+    border-bottom: 2px solid #7426aa;
+}
+
+/* Ecrãs até 767px */
+@media (max-width: 767.98px) {
+    #menu {
+        padding-top: 10px;
+    }
+
+    #menu .navbar-nav {
+        align-items: center;
+        width: 100%;
+    }
+
+    #menu .nav-link {
+        padding: 8px 12px;
+    }
+
+    #menu .search-form {
+        margin: 12px auto 4px;
+    }
+}
