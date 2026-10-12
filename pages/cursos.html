@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cursos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="icon" href="/images/icons/favicon.png" type="image/png">
 
@@ -26,87 +28,44 @@
 
     <!-- Barra de navegação -->
 
-    <nav class="navbar navbar-expand-md bg-light px-4 py-2 position-sticky top-0">
-
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-
-            <!-- Logótipo -->
-
-            <a class="navbar-brand" href="/index.html">
-
-                <div class="d-flex align-items-center">
-                    <img src="/images/icons/cesae-digital-logo1.png" alt="CESAE Digital" width="100" height="40">
-                </div>
-
-            </a>
-
-            <!-- Botão hamburguer -->
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
-
+            <a class="navbar-brand" href="index.html"><img src="../images/icons/cesae-digital-logo1.png"
+                    alt="CESAE Digital" class="logo-cesae" /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
-            <!-- Menu, links e pesquisa -->
-
-            <div class="collapse navbar-collapse" id="menu">
-
-                <ul class="navbar-nav me-auto">
-
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
                     <li class="nav-item">
-
-                        <a class="nav-link" href="/index.html">Início</a>
-
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="parceiros.html">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactos.html">Contactos</a>
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link" href="/pages/parceiros.html">Parceiros</a>
-
+                        <a class="btn-login ms-lg-2 mt-2 mt-lg-0" href="login.html" aria-label="Iniciar sessão">
+                            <i class="bi bi-person"></i>
+                        </a>
                     </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="/pages/contactos.html">Contactos</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" id="cursos" href="/pages/cursos.html">Cursos</a>
-
-                    </li>
-
                 </ul>
-
-                <!-- Pesquisa -->
-
-                <form class="search-form d-flex" role="search">
-
-                    <input class="form-control rounded-pill" type="search" placeholder="Pesquisar"
-                        aria-label="Pesquisar">
-
-                    <button class="btn purple rounded-pill" type="submit">
-
-                        Pesquisar
-
-                    </button>
-
-                </form>
-
             </div>
-
         </div>
-
     </nav>
 
     <!-- Fim da Barra de Navegação -->
 
     <!-- Header -->
 
-    <header class="d-none d-md-block text-start py-3"
+    <header class="d-none d-lg-block text-start py-3"
         style="background-image: url('../images/cursos/Header_Pag_Cursos.png'); background-size: cover; background-position: right center;">
 
         <div class="container py-2 text-start">
@@ -280,13 +239,13 @@
 
                 <!-- Grelha de Cards -->
 
-                <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3">
+                <div class="row row-cols-2 row-cols-md-2 row-cols-xl-4 g-3">
 
                     <!-- Curso 1 -->
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Aplicações Informáticas de Gestão.jpg"
@@ -320,7 +279,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Marketing Digital.jpg" class="w-100 h-100 object-fit-cover"
@@ -355,7 +314,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/AWS RE-START.jpg" class="w-100 h-100 object-fit-cover"
@@ -390,7 +349,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Cibersegurança.jpg" class="w-100 h-100 object-fit-cover"
@@ -425,7 +384,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Cibersegurança.jpg" class="w-100 h-100 object-fit-cover"
@@ -460,7 +419,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Marketing Digital.jpg" class="w-100 h-100 object-fit-cover"
@@ -495,7 +454,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Fortinet.jpg" class="w-100 h-100 object-fit-cover"
@@ -530,7 +489,7 @@
 
                     <div class="col">
 
-                        <div class="card h-100">
+                        <div class="card h-100 rounded-4 shadow-sm">
 
                             <div class="ratio ratio-4x3">
                                 <img src="/images/cursos/Marketing Digital.jpg" class="w-100 h-100 object-fit-cover"

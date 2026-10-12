@@ -1,30 +1,135 @@
-/*Fixar a navbar */
+:root {
+    --primary: #7B2CBF;
+    --primary-dark: #7426AA;
+    --accent: #f0e4fa;
+    --ink: #212529;
+    --background: #ffffff;
+    --surface: #ffffff;
+}
+
+/* ========================================
+   ESTILOS GERAIS
+======================================== */
+
+body {
+    background: var(--background);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+/* ========================================
+   NAVBAR — PADRÃO DA PÁGINA PARCEIROS
+======================================== */
+
 .navbar {
     z-index: 1030;
+    background: var(--surface);
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
 }
 
-/* Estilo para o link do menu "Cursos" */
-.nav-link#cursos {
-    color: #7426aa;
-    border-bottom: 2px solid #7426aa;
+.navbar-brand {
+    color: var(--primary-dark);
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
-/* Botão de pesquisa */
+.navbar-brand img {
+    display: block;
+    object-fit: contain;
+}
+
+/* Logótipo CESAE */
+
+.navbar-brand .logo-cesae,
+.logo-cesae {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Links da navegação */
+
+.navbar .nav-link {
+    position: relative;
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 8px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Link ativo e hover */
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+}
+
+/* Botão de perfil */
+
+.navbar .btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar .btn-login:hover {
+    background-color: #e5d0f5;
+    color: #581985;
+}
+
+/* Ícone de perfil */
+
+.navbar .btn-login i {
+    line-height: 1;
+}
+
+/* ========================================
+   BOTÕES ROXOS
+======================================== */
+
 .purple {
-    background-color: #7B2CBF;
-    color: white;
-    border-color: #7B2CBF;
-
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    border: 1px solid var(--primary-dark);
+    border-radius: 9px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hover Botao Ver Curso */
- .btn:hover{
+.purple:hover,
+.purple:focus-visible {
     background-color: #581985;
-    color: white;
-    border-color: #45116b;}
+    color: #ffffff;
+    border-color: #581985;
+}
 
+/* Hover dos restantes botões */
 
-/* Formulário de pesquisa */
+.btn:hover {
+    border-color: #45116b;
+}
+
+/* ========================================
+   FORMULÁRIO DE PESQUISA
+======================================== */
+
 .search-form {
     display: flex;
     gap: 8px;
@@ -34,30 +139,59 @@
 
 .search-form input {
     flex: 1;
+    min-width: 0;
 }
 
-/* Efeito hover nos links */
-#menu .nav-link:hover {
-    color: #7426aa;
-    border-bottom: 2px solid #7426aa;
-}
+/* ========================================
+   RESPONSIVIDADE DA NAVBAR
+======================================== */
 
-/* Ecrãs até 767px */
 @media (max-width: 767.98px) {
-    #menu {
+    .navbar .navbar-collapse {
         padding-top: 10px;
     }
 
-    #menu .navbar-nav {
+    .navbar .navbar-nav {
         align-items: center;
         width: 100%;
     }
 
-    #menu .nav-link {
+    .navbar .nav-link {
         padding: 8px 12px;
     }
 
-    #menu .search-form {
+    .navbar .btn-login {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .navbar .search-form {
         margin: 12px auto 4px;
     }
+}
+
+/* ========================================
+            CARDS DE CURSOS
+======================================== */
+
+
+.card {
+    border: 1px solid #e5d0f5;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(41, 36, 58, 0.09);
+}
+
+.card .card-title {
+    color: #212529;
+    font-weight: 600;
+}
+
+.card .card-text {
+    color: #5b6472;
+    line-height: 1.6;
 }
