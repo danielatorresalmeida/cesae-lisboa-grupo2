@@ -1,3 +1,4 @@
+
 :root {
     --primary: #7B2CBF;
     --primary-dark: #7426AA;
@@ -5,6 +6,9 @@
     --ink: #212529;
     --background: #ffffff;
     --surface: #ffffff;
+    --border: #e5d0f5;
+    --text-muted: #5b6472;
+    --shadow: 0 10px 24px rgba(41, 36, 58, 0.09);
 }
 
 /* ========================================
@@ -19,10 +23,11 @@ body {
 }
 
 /* ========================================
-   NAVBAR — PADRÃO DA PÁGINA PARCEIROS
+   NAVBAR
 ======================================== */
 
 .navbar {
+    position: relative;
     z-index: 1030;
     background: var(--surface);
     border-bottom: 1px solid #e5e5e5;
@@ -50,25 +55,30 @@ body {
     height: auto;
 }
 
-/* Links da navegação */
+/* Links de navegação */
 
 .navbar .nav-link {
     position: relative;
+    padding: 12px 8px;
+    border-bottom: 2px solid transparent;
     color: var(--ink);
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 8px;
-    border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
-
-/* Link ativo e hover */
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
     color: var(--primary-dark);
     border-bottom-color: var(--primary-dark);
+}
+
+/* Foco acessível nos links */
+
+.navbar .nav-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }
 
 /* Botão de perfil */
@@ -95,10 +105,13 @@ body {
     color: #581985;
 }
 
-/* Ícone de perfil */
-
 .navbar .btn-login i {
     line-height: 1;
+}
+
+.navbar .btn-login:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }
 
 /* ========================================
@@ -110,7 +123,10 @@ body {
     color: #ffffff;
     border: 1px solid var(--primary-dark);
     border-radius: 9px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .purple:hover,
@@ -118,6 +134,11 @@ body {
     background-color: #581985;
     color: #ffffff;
     border-color: #581985;
+}
+
+.purple:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }
 
 /* Hover dos restantes botões */
@@ -140,6 +161,262 @@ body {
 .search-form input {
     flex: 1;
     min-width: 0;
+}
+
+/* ========================================
+   BANNER — PÁGINA DE CURSOS
+   A imagem é definida no HTML
+======================================== */
+
+.cursos-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: 180px;
+    padding: 1.5rem 0;
+    overflow: hidden;
+    background-color: var(--accent);
+}
+
+/* Imagem do banner */
+
+.cursos-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+/* Degradê para melhorar a leitura */
+
+.cursos-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(248, 244, 255, 0.92) 32%,
+        rgba(248, 244, 255, 0.35) 62%,
+        rgba(248, 244, 255, 0.05) 100%
+    );
+}
+
+/* Conteúdo */
+
+.cursos-hero-content {
+    max-width: 680px;
+}
+
+/* Etiqueta superior */
+
+.cursos-hero-label {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    color: var(--primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+/* Título */
+
+.cursos-hero h1 {
+    margin-bottom: 0.5rem;
+    color: var(--ink);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+/* Descrição */
+
+.cursos-hero p {
+    max-width: 620px;
+    margin-bottom: 0;
+    color: #42404a;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* ========================================
+   CONTEÚDO DA PÁGINA DE CURSOS
+======================================== */
+
+.cursos-content {
+    margin-top: 1.5rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.cursos-content > .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+/* ========================================
+   FILTROS
+======================================== */
+
+.cursos-content aside h5 {
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.cursos-content aside hr {
+    margin: 0 0 1.25rem;
+    border-color: #d7d3dc;
+    opacity: 1;
+}
+
+.cursos-content aside h6 {
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+    font-weight: 600;
+}
+
+.cursos-content aside .form-check {
+    margin-bottom: 0.4rem;
+}
+
+.cursos-content aside .form-check-label {
+    color: #42404a;
+    cursor: pointer;
+}
+
+/* Checkbox */
+
+.cursos-content .form-check-input {
+    border-color: #c8bfd1;
+    cursor: pointer;
+}
+
+.cursos-content .form-check-input:checked {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.cursos-content .form-check-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(123, 44, 191, 0.15);
+}
+
+/* Botão de filtros em ecrãs pequenos */
+
+.cursos-content aside > .btn {
+    border-color: #d9dce2;
+    border-radius: 8px;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.cursos-content aside > .btn:hover {
+    background-color: var(--accent);
+    border-color: var(--primary);
+}
+
+/* ========================================
+   ORDENAÇÃO DOS CURSOS
+======================================== */
+
+.cursos-content .form-select {
+    min-height: 42px;
+    border-color: #d9dce2;
+    border-radius: 8px;
+    color: var(--ink);
+    background-color: #ffffff;
+}
+
+.cursos-content .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(123, 44, 191, 0.12);
+}
+
+/* Número de cursos disponíveis */
+
+.cursos-content > .row > main > p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   CARDS DE CURSOS
+======================================== */
+
+.cursos-content .card {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.cursos-content .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* Imagens dos cartões */
+
+.cursos-content .card .ratio {
+    overflow: hidden;
+    background-color: #f6f2fa;
+}
+
+.cursos-content .card .ratio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cursos-content .card:hover .ratio img {
+    transform: scale(1.03);
+}
+
+/* Corpo dos cartões */
+
+.cursos-content .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Títulos */
+
+.cursos-content .card-title {
+    margin-bottom: 0.65rem;
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Descrições */
+
+.cursos-content .card-text {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Botões alinhados na base */
+
+.cursos-content .card .btn {
+    width: 100%;
+    margin-top: auto;
 }
 
 /* ========================================
@@ -171,27 +448,119 @@ body {
 }
 
 /* ========================================
-            CARDS DE CURSOS
+   RESPONSIVIDADE DO BANNER
 ======================================== */
 
+@media (max-width: 991.98px) {
+    .cursos-hero {
+        min-height: 170px;
+    }
 
-.card {
-    border: 1px solid #e5d0f5;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .cursos-hero-image {
+        object-position: 60% center;
+    }
+
+    .cursos-hero::before {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(248, 244, 255, 0.90) 48%,
+            rgba(248, 244, 255, 0.35) 100%
+        );
+    }
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(41, 36, 58, 0.09);
+/* ========================================
+   RESPONSIVIDADE DOS CURSOS
+======================================== */
+
+@media (max-width: 767.98px) {
+    .cursos-hero {
+        min-height: 165px;
+        padding: 1.5rem 0;
+    }
+
+    .cursos-hero-image {
+        object-position: 65% center;
+    }
+
+    .cursos-hero-content {
+        max-width: 100%;
+    }
+
+    .cursos-hero h1 {
+        font-size: 2rem;
+    }
+
+    .cursos-hero p {
+        max-width: 440px;
+        font-size: 0.95rem;
+    }
+
+    .cursos-content {
+        margin-top: 1.25rem !important;
+    }
+
+    .cursos-content > .row {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+
+    .cursos-content aside .collapse.show,
+    .cursos-content aside .collapsing {
+        padding-top: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .cursos-content .card-body {
+        padding: 0.75rem;
+    }
+
+    .cursos-content .card-title {
+        font-size: 0.95rem;
+    }
+
+    .cursos-content .card-text {
+        font-size: 0.85rem;
+    }
 }
 
-.card .card-title {
-    color: #212529;
-    font-weight: 600;
+/* Telemóveis estreitos */
+
+@media (max-width: 400px) {
+    .cursos-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .cursos-hero p {
+        font-size: 0.9rem;
+    }
+
+    .cursos-content .card-body {
+        padding: 0.65rem;
+    }
+
+    .cursos-content .card .btn {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.85rem;
+    }
 }
 
-.card .card-text {
-    color: #5b6472;
-    line-height: 1.6;
+/* ========================================
+   ACESSIBILIDADE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .nav-link,
+    .navbar .btn-login,
+    .purple,
+    .cursos-content .card,
+    .cursos-content .card .ratio img {
+        transition: none;
+    }
+
+    .cursos-content .card:hover,
+    .cursos-content .card:hover .ratio img {
+        transform: none;
+    }
 }
