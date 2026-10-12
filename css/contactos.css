@@ -1,0 +1,360 @@
+/* ========================================
+   ESTILOS GERAIS
+   ======================================== */
+
+:root {
+    --cesae-purple: #7b2cbf;
+    --cesae-purple-dark: #581985;
+    --cesae-purple-light: #f3eafa;
+    --cesae-border: #dee2e6;
+    --cesae-text: #212529;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--cesae-text);
+    background-color: #ffffff;
+}
+
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
+}
+
+.navbar-brand {
+    color: var(--cesae-purple-dark);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+/* Logótipo CESAE */
+.navbar-brand img {
+    object-fit: contain;
+}
+
+.navbar-brand .logo-cesae {
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Links */
+.nav-link {
+    color: var(--cesae-text);
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #7426AA !important;
+    border-bottom: 2px solid #7426AA;
+}
+
+/* Botão de login */
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #f0e4fa;
+    color: #7426AA;
+
+    border-radius: 10px;
+
+    width: 44px;
+    height: 44px;
+
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.btn-login:hover {
+    background-color: #e5d0f5;
+    color: #581985;
+}
+
+
+/* Login */
+
+.btn-login {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--cesae-purple);
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1.25rem;
+}
+
+.btn-login:hover {
+    background-color: var(--cesae-purple-dark);
+    color: #ffffff;
+}
+
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+   ======================================== */
+
+.page-header {
+    padding: 4.5rem 0 2.5rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.page-header p {
+    max-width: 680px;
+    margin: auto;
+    color: #605a70;
+}
+
+/* Etiqueta "FALE CONNOSCO" */
+.eyebrow {
+    display: inline-block;
+    background: var(--cesae-purple-light);
+    color: var(--cesae-purple-dark);
+    padding: 0.25rem 0.85rem;
+    border-radius: 99px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+/* ========================================
+   SECÇÕES
+   ======================================== */
+
+.section-block {
+    margin-bottom: 4rem;
+}
+
+.section-heading {
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* ========================================
+   CARTÕES DE CONTACTO
+   ======================================== */
+
+.contact-card {
+    height: 100%;
+
+    padding: 2rem;
+
+    background-color: #ffffff;
+
+    border: 1px solid var(--cesae-border);
+    border-radius: 1rem;
+
+    box-shadow:
+        0 0.25rem 1rem rgba(33, 37, 41, 0.06);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    margin-bottom: 1.75rem;
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--cesae-purple-light);
+    color: var(--cesae-purple);
+
+    font-size: 1.2rem;
+}
+
+.contact-item h3 {
+    margin-bottom: 0.25rem;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-item a {
+    color: var(--cesae-purple-dark);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.contact-note {
+    margin: 0.25rem 0 0;
+
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.contact-card {
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(41, 36, 58, 0.09);
+}
+
+
+/* ========================================
+   FORMULÁRIO
+   ======================================== */
+
+.form-intro {
+    margin-bottom: 1.5rem;
+
+    color: #6c757d;
+}
+
+.form-control,
+.form-select {
+    min-height: 48px;
+
+    border-radius: 0.6rem;
+}
+
+textarea.form-control {
+    min-height: 150px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cesae-purple);
+
+    box-shadow:
+        0 0 0 0.25rem rgba(123, 44, 191, 0.15);
+}
+
+
+/* ========================================
+   BOTÕES
+   ======================================== */
+
+.btn-brand {
+    padding: 0.65rem 1.4rem;
+
+    background-color: var(--cesae-purple);
+    color: #ffffff;
+
+    border: 1px solid var(--cesae-purple);
+    border-radius: 0.5rem;
+
+    font-weight: 500;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--cesae-purple-dark);
+    color: #ffffff;
+
+    border-color: var(--cesae-purple-dark);
+}
+
+
+/* ========================================
+   LISBOA
+   ======================================== */
+
+.location-section {
+    padding: 2rem;
+
+    background-color: #f8f9fa;
+
+    border: 1px solid var(--cesae-border);
+    border-radius: 1rem;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer-cesae {
+    background-color: #321448;
+    color: #ffffff;
+    border-top: 1px solid #69417c;
+}
+
+/* Links do footer */
+.footer-link {
+    color: #e5c2ff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+    }
+
+    .btn-login {
+        margin-left: 0 !important;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+
+    .page-header {
+        padding: 2.5rem 0 2rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .section-block {
+        margin-bottom: 3rem;
+    }
+}

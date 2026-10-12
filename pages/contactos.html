@@ -1,11 +1,606 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!doctype html>
+<html lang="pt-PT">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Contactos do CESAE Digital Lisboa. Consulte os contactos gerais ou envie uma mensagem."
+    >
+
+    <title>Contactos | CESAE Digital</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="../images/icons/favicon.ico"
+        type="image/x-icon"
+    >
+
+    <!-- Fonte -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS próprio -->
+    <link
+        rel="stylesheet"
+        href="../css/contactos.css"
+    >
 </head>
+
+
 <body>
-    
+
+    <!-- ========================================
+         NAVBAR
+         ======================================== -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container">
+
+            <!-- Logótipo -->
+            <a
+                class="navbar-brand"
+                href="../index.html"
+            >
+                <img
+                    src="../images/icons/cesae-digital-logo.png"
+                    alt="CESAE Digital"
+                    class="logo-cesae"
+                >
+            </a>
+
+
+            <!-- Botão hamburguer -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- Menu -->
+            <div
+                class="collapse navbar-collapse"
+                id="mainNav"
+            >
+
+                <ul
+                    class="navbar-nav ms-auto align-items-lg-center gap-lg-3"
+                >
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="../index.html"
+                        >
+                            Início
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="cursos.html"
+                        >
+                            Cursos
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="parceiros.html"
+                        >
+                            Parceiros
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            aria-current="page"
+                            href="contactos.html"
+                        >
+                            Contactos
+                        </a>
+                    </li>
+
+
+                    <!-- Login -->
+                    <li class="nav-item">
+
+                        <a
+                            class="btn-login ms-lg-2 mt-2 mt-lg-0"
+                            href="login.html"
+                            aria-label="Iniciar sessão"
+                        >
+                            <i class="bi bi-person"></i>
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ========================================
+         CONTEÚDO PRINCIPAL
+         ======================================== -->
+
+    <main class="container pb-5">
+
+
+        <!-- Cabeçalho -->
+        <header class="page-header">
+
+            <span class="eyebrow">
+                FALE CONNOSCO
+            </span>
+
+            <h1>
+                Contactos
+            </h1>
+
+            <p>
+                Tem alguma questão sobre cursos, inscrições ou formação?
+                Consulte os nossos contactos ou envie-nos uma mensagem.
+            </p>
+
+        </header>
+
+
+        <!-- Contactos + formulário -->
+        <section
+            class="section-block"
+            aria-labelledby="contactos-title"
+        >
+
+            <div class="row g-4 align-items-stretch">
+
+
+                <!-- Informações -->
+                <div class="col-12 col-lg-5">
+
+                    <article class="contact-card h-100">
+
+                        <h2
+                            id="contactos-title"
+                            class="section-heading"
+                        >
+                            Informações de contacto
+                        </h2>
+
+
+                        <!-- Email -->
+                        <div class="contact-item">
+
+                            <span
+                                class="contact-icon"
+                                aria-hidden="true"
+                            >
+                                <i class="bi bi-envelope"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Email
+                                </h3>
+
+                                <a href="mailto:cesae@cesae.pt">
+                                    cesae@cesae.pt
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Telefone -->
+                        <div class="contact-item">
+
+                            <span
+                                class="contact-icon"
+                                aria-hidden="true"
+                            >
+                                <i class="bi bi-telephone"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Telefone
+                                </h3>
+
+                                <a href="tel:+351226195200">
+                                    226 195 200
+                                </a>
+
+                                <p class="contact-note">
+                                    Chamada para a rede fixa nacional.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Lisboa -->
+                        <div class="contact-item">
+
+                            <span
+                                class="contact-icon"
+                                aria-hidden="true"
+                            >
+                                <i class="bi bi-geo-alt"></i>
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Lisboa
+                                </h3>
+
+                                <p class="mb-1">
+                                    Extensão itinerante do CESAE Digital.
+                                </p>
+
+                                <p class="contact-note">
+                                    Consulte os contactos oficiais para obter
+                                    indicações atualizadas sobre a formação em
+                                    Lisboa.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            class="btn btn-brand mt-3"
+                            href="https://www.cesaedigital.pt/fldrSite/pages/contact.aspx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Contactos oficiais
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Formulário -->
+                <div class="col-12 col-lg-7">
+
+                    <article class="contact-card h-100">
+
+                        <h2 class="section-heading">
+                            Envie uma mensagem
+                        </h2>
+
+                        <p class="form-intro">
+                            Preencha os campos abaixo.
+                            Os campos assinalados com * são obrigatórios.
+                        </p>
+
+
+                        <form
+                            action="mailto:cesae@cesae.pt?subject=Contacto%20Website%20CESAE%20Lisboa"
+                            method="post"
+                            enctype="text/plain"
+                        >
+
+                            <div class="row g-3">
+
+
+                                <!-- Nome -->
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="nome"
+                                        class="form-label"
+                                    >
+                                        Nome *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nome"
+                                        name="Nome"
+                                        placeholder="Primeiro e último nome"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Email -->
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="email"
+                                        class="form-label"
+                                    >
+                                        Email *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="Email"
+                                        placeholder="nome@exemplo.pt"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <!-- Telefone -->
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="telefone"
+                                        class="form-label"
+                                    >
+                                        Telefone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="telefone"
+                                        name="Telefone"
+                                        placeholder="912 345 678"
+                                        autocomplete="tel"
+                                    >
+
+                                </div>
+
+
+                                <!-- Assunto -->
+                                <div class="col-12 col-md-6">
+
+                                    <label
+                                        for="assunto"
+                                        class="form-label"
+                                    >
+                                        Assunto *
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="assunto"
+                                        name="Assunto"
+                                        required
+                                    >
+
+                                        <option
+                                            value=""
+                                            selected
+                                            disabled
+                                        >
+                                            Selecione uma opção
+                                        </option>
+
+                                        <option value="Cursos e formação">
+                                            Cursos e formação
+                                        </option>
+
+                                        <option value="Inscrições">
+                                            Inscrições
+                                        </option>
+
+                                        <option value="Empresas e parcerias">
+                                            Empresas e parcerias
+                                        </option>
+
+                                        <option value="Outro">
+                                            Outro
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- Mensagem -->
+                                <div class="col-12">
+
+                                    <label
+                                        for="mensagem"
+                                        class="form-label"
+                                    >
+                                        Mensagem *
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="mensagem"
+                                        name="Mensagem"
+                                        rows="6"
+                                        placeholder="Escreva aqui a sua mensagem..."
+                                        required
+                                    ></textarea>
+
+                                </div>
+
+
+                                <!-- Botão -->
+                                <div class="col-12 mt-4">
+
+                                    <button
+                                        class="btn btn-brand"
+                                        type="submit"
+                                    >
+                                        <i class="bi bi-send me-2"></i>
+                                        Enviar mensagem
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Informação Lisboa -->
+        <section
+            class="section-block location-section"
+            aria-labelledby="lisboa-title"
+        >
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-12 col-lg-8">
+
+                    <span class="eyebrow">
+                        FORMAÇÃO EM LISBOA
+                    </span>
+
+                    <h2
+                        id="lisboa-title"
+                        class="section-heading mt-2"
+                    >
+                        CESAE Digital em Lisboa
+                    </h2>
+
+                    <p class="mb-0">
+                        Lisboa integra a rede de extensões itinerantes do CESAE
+                        Digital. Por esse motivo, a localização pode variar de
+                        acordo com a formação. Consulte sempre a informação
+                        específica do curso ou os contactos oficiais antes de se
+                        deslocar.
+                    </p>
+
+                </div>
+
+
+                <div class="col-12 col-lg-4 text-lg-end">
+
+                    <a
+                        class="btn btn-brand"
+                        href="https://www.cesaedigital.pt/fldrSite/pages/contact.aspx"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Saber mais
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+         ======================================== -->
+
+    <footer class="footer-cesae text-white py-4 mt-5">
+
+        <div class="container">
+
+            <div class="row g-3 align-items-center">
+
+                <div
+                    class="col-12 col-md-7 text-center text-md-start"
+                >
+
+                    <strong>
+                        CESAE Digital
+                    </strong>
+
+                    <p class="small mb-0 mt-1">
+                        Projeto académico · Grupo 2 · Web Client
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="col-12 col-md-5 text-center text-md-end"
+                >
+
+                    <a
+                        class="footer-link me-3"
+                        href="mailto:geral@cesae.pt"
+                    >
+                        geral@cesae.pt
+                    </a>
+
+                    <a
+                        class="footer-link"
+                        href="tel:+351226195200"
+                    >
+                        226 195 200
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
 </body>
+
 </html>
