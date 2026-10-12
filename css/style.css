@@ -1,0 +1,205 @@
+/* ========================================
+   CESAE DIGITAL — CSS GLOBAL
+   Estilos partilhados por todas as páginas
+======================================== */
+
+/* 1. Variáveis globais */
+
+:root {
+    --primary: #7B2CBF;
+    --primary-dark: #7426AA;
+    --accent: #f0e4fa;
+    --ink: #212529;
+    --background: #ffffff;
+    --surface: #ffffff;
+    --footer-background: #2b2d2f;
+}
+
+/* 2. Estilos gerais */
+
+body {
+    background-color: var(--background);
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+}
+
+/* 3. Navbar global */
+
+.navbar {
+    position: relative;
+    z-index: 1030;
+    background-color: var(--surface);
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
+}
+
+.navbar-brand {
+    color: var(--primary-dark);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.navbar-brand img,
+.logo-cesae {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    color: var(--ink);
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+}
+
+/* 4. Botão de perfil */
+
+.btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: var(--accent);
+    color: var(--primary-dark);
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #e5d0f5;
+    color: #581985;
+}
+
+.btn-login i {
+    line-height: 1;
+}
+
+/* 5. Botões principais */
+
+.btn-brand,
+.purple {
+    background-color: var(--primary-dark);
+    color: #ffffff;
+    border: 1px solid var(--primary-dark);
+    border-radius: 9px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-brand:hover,
+.purple:hover,
+.btn-brand:focus-visible,
+.purple:focus-visible {
+    background-color: #581985;
+    color: #ffffff;
+    border-color: #581985;
+}
+
+/* 6. Links do footer */
+
+.footer-cesae {
+    background-color: var(--footer-background);
+    color: #ffffff;
+}
+
+.footer-cesae a,
+.footer-link {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer-cesae a:hover,
+.footer-link:hover {
+    color: #cda8f0;
+}
+
+/* 7. Logótipos do footer */
+
+.footer-logo {
+    width: 270px;
+    max-width: 80%;
+    height: auto;
+}
+
+.footer-associado {
+    width: 100px;
+    max-height: 45px;
+    object-fit: contain;
+}
+
+.footer-institucional {
+    max-width: 130px;
+    max-height: 35px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* 8. Redes sociais do footer */
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: #ffffff;
+    border: 1px solid #d5d5d5;
+    border-radius: 50%;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: #ffffff;
+    color: var(--footer-background);
+}
+
+/* 9. Responsividade global */
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        padding-top: 10px;
+    }
+
+    .navbar .navbar-nav {
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar .nav-link {
+        padding: 8px 12px;
+    }
+
+    .navbar .btn-login {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-logo {
+        width: 220px;
+    }
+
+    .footer-cesae .border-top,
+    .footer-cesae .border-bottom {
+        border-color: #666666 !important;
+    }
+}
