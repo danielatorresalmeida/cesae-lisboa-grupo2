@@ -1,170 +1,6 @@
 
-:root {
-    --primary: #7B2CBF;
-    --primary-dark: #7426AA;
-    --accent: #f0e4fa;
-    --ink: #212529;
-    --background: #ffffff;
-    --surface: #ffffff;
-    --border: #e5d0f5;
-    --text-muted: #5b6472;
-    --shadow: 0 10px 24px rgba(41, 36, 58, 0.09);
-}
-
 /* ========================================
-   ESTILOS GERAIS
-======================================== */
-
-body {
-    background: var(--background);
-    color: var(--ink);
-    font-family: "Inter", sans-serif;
-    line-height: 1.6;
-}
-
-/* ========================================
-   NAVBAR
-======================================== */
-
-.navbar {
-    position: relative;
-    z-index: 1030;
-    background: var(--surface);
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
-}
-
-.navbar-brand {
-    color: var(--primary-dark);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-}
-
-.navbar-brand img {
-    display: block;
-    object-fit: contain;
-}
-
-/* Logótipo CESAE */
-
-.navbar-brand .logo-cesae,
-.logo-cesae {
-    display: block;
-    width: 200px;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Links de navegação */
-
-.navbar .nav-link {
-    position: relative;
-    padding: 12px 8px;
-    border-bottom: 2px solid transparent;
-    color: var(--ink);
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-    color: var(--primary-dark);
-    border-bottom-color: var(--primary-dark);
-}
-
-/* Foco acessível nos links */
-
-.navbar .nav-link:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
-}
-
-/* Botão de perfil */
-
-.navbar .btn-login {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    background-color: var(--accent);
-    color: var(--primary-dark);
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 24px;
-    line-height: 1;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.navbar .btn-login:hover {
-    background-color: #e5d0f5;
-    color: #581985;
-}
-
-.navbar .btn-login i {
-    line-height: 1;
-}
-
-.navbar .btn-login:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
-}
-
-/* ========================================
-   BOTÕES ROXOS
-======================================== */
-
-.purple {
-    background-color: var(--primary-dark);
-    color: #ffffff;
-    border: 1px solid var(--primary-dark);
-    border-radius: 9px;
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.purple:hover,
-.purple:focus-visible {
-    background-color: #581985;
-    color: #ffffff;
-    border-color: #581985;
-}
-
-.purple:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 3px;
-}
-
-/* Hover dos restantes botões */
-
-.btn:hover {
-    border-color: #45116b;
-}
-
-/* ========================================
-   FORMULÁRIO DE PESQUISA
-======================================== */
-
-.search-form {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-    max-width: 450px;
-}
-
-.search-form input {
-    flex: 1;
-    min-width: 0;
-}
-
-/* ========================================
-   BANNER — PÁGINA DE CURSOS
+   1. BANNER — PÁGINA DE CURSOS
    A imagem é definida no HTML
 ======================================== */
 
@@ -176,7 +12,7 @@ body {
     min-height: 180px;
     padding: 1.5rem 0;
     overflow: hidden;
-    background-color: var(--accent);
+    background-color: #f0e4fa;
 }
 
 /* Imagem do banner */
@@ -219,7 +55,7 @@ body {
 .cursos-hero-label {
     display: inline-block;
     margin-bottom: 0.3rem;
-    color: var(--primary-dark);
+    color: #7426AA;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.16em;
@@ -229,7 +65,7 @@ body {
 
 .cursos-hero h1 {
     margin-bottom: 0.5rem;
-    color: var(--ink);
+    color: #212529;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     line-height: 1.1;
@@ -247,7 +83,7 @@ body {
 }
 
 /* ========================================
-   CONTEÚDO DA PÁGINA DE CURSOS
+   2. CONTEÚDO DA PÁGINA DE CURSOS
 ======================================== */
 
 .cursos-content {
@@ -261,12 +97,12 @@ body {
 }
 
 /* ========================================
-   FILTROS
+   3. FILTROS
 ======================================== */
 
 .cursos-content aside h5 {
     margin-bottom: 0.75rem;
-    color: var(--ink);
+    color: #212529;
     font-size: 1.15rem;
     font-weight: 600;
 }
@@ -279,7 +115,7 @@ body {
 
 .cursos-content aside h6 {
     margin-bottom: 0.75rem;
-    color: var(--ink);
+    color: #212529;
     font-weight: 600;
 }
 
@@ -292,7 +128,7 @@ body {
     cursor: pointer;
 }
 
-/* Checkbox */
+/* Checkboxes */
 
 .cursos-content .form-check-input {
     border-color: #c8bfd1;
@@ -300,12 +136,12 @@ body {
 }
 
 .cursos-content .form-check-input:checked {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
+    background-color: #7426AA;
+    border-color: #7426AA;
 }
 
 .cursos-content .form-check-input:focus {
-    border-color: var(--primary);
+    border-color: #7B2CBF;
     box-shadow: 0 0 0 0.2rem rgba(123, 44, 191, 0.15);
 }
 
@@ -314,47 +150,47 @@ body {
 .cursos-content aside > .btn {
     border-color: #d9dce2;
     border-radius: 8px;
-    color: var(--primary-dark);
+    color: #7426AA;
     font-weight: 500;
 }
 
 .cursos-content aside > .btn:hover {
-    background-color: var(--accent);
-    border-color: var(--primary);
+    background-color: #f0e4fa;
+    border-color: #7B2CBF;
 }
 
 /* ========================================
-   ORDENAÇÃO DOS CURSOS
+   4. ORDENAÇÃO DOS CURSOS
 ======================================== */
 
 .cursos-content .form-select {
     min-height: 42px;
     border-color: #d9dce2;
     border-radius: 8px;
-    color: var(--ink);
+    color: #212529;
     background-color: #ffffff;
 }
 
 .cursos-content .form-select:focus {
-    border-color: var(--primary);
+    border-color: #7B2CBF;
     box-shadow: 0 0 0 0.2rem rgba(123, 44, 191, 0.12);
 }
 
 /* Número de cursos disponíveis */
 
 .cursos-content > .row > main > p {
-    color: var(--text-muted);
+    color: #5b6472;
     font-size: 0.9rem;
 }
 
 /* ========================================
-   CARDS DE CURSOS
+   5. CARTÕES DE CURSOS
 ======================================== */
 
 .cursos-content .card {
     height: 100%;
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 1px solid #e5d0f5;
     border-radius: 12px;
     background-color: #ffffff;
     transition:
@@ -364,7 +200,7 @@ body {
 
 .cursos-content .card:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 24px rgba(41, 36, 58, 0.09);
 }
 
 /* Imagens dos cartões */
@@ -397,7 +233,7 @@ body {
 
 .cursos-content .card-title {
     margin-bottom: 0.65rem;
-    color: var(--ink);
+    color: #212529;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.4;
@@ -407,7 +243,7 @@ body {
 
 .cursos-content .card-text {
     margin-bottom: 1rem;
-    color: var(--text-muted);
+    color: #5b6472;
     font-size: 0.9rem;
     line-height: 1.6;
 }
@@ -420,35 +256,7 @@ body {
 }
 
 /* ========================================
-   RESPONSIVIDADE DA NAVBAR
-======================================== */
-
-@media (max-width: 767.98px) {
-    .navbar .navbar-collapse {
-        padding-top: 10px;
-    }
-
-    .navbar .navbar-nav {
-        align-items: center;
-        width: 100%;
-    }
-
-    .navbar .nav-link {
-        padding: 8px 12px;
-    }
-
-    .navbar .btn-login {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-
-    .navbar .search-form {
-        margin: 12px auto 4px;
-    }
-}
-
-/* ========================================
-   RESPONSIVIDADE DO BANNER
+   6. RESPONSIVIDADE DO BANNER
 ======================================== */
 
 @media (max-width: 991.98px) {
@@ -471,7 +279,7 @@ body {
 }
 
 /* ========================================
-   RESPONSIVIDADE DOS CURSOS
+   7. RESPONSIVIDADE DOS CURSOS
 ======================================== */
 
 @media (max-width: 767.98px) {
@@ -547,13 +355,10 @@ body {
 }
 
 /* ========================================
-   ACESSIBILIDADE
+   8. ACESSIBILIDADE
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
-    .navbar .nav-link,
-    .navbar .btn-login,
-    .purple,
     .cursos-content .card,
     .cursos-content .card .ratio img {
         transition: none;

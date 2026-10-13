@@ -1,222 +1,301 @@
+
 /* ========================================
-   CESAE DIGITAL — ESTILOS GLOBAIS
+   1. VARIÁVEIS GLOBAIS
 ======================================== */
 
-
-/* 1. CORES */
-
 :root {
-    --primary: #7B2CBF;
-    --primary-dark: #7426AA;
-    --accent: #f0e4fa;
-    --ink: #212529;
-    --background: #ffffff;
-    --footer-background: #34373A;
+    --cor-primaria: #7928c8;
+    --cor-secundaria: #21162f;
+    --cor-texto: #17152b;
+    --cor-fundo: #ffffff;
+    --cor-fundo-claro: #f7f5fa;
+    --cor-texto-claro: #ffffff;
+    --cor-borda: #eadcf9;
+    --cor-destaque: #d8b4ff;
+
+    --fonte-principal: 'Inter', sans-serif;
+
+    --raio-cartao: 12px;
+    --sombra-cartao: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+/* ========================================
+   2. ESTILOS GERAIS
+======================================== */
 
-/* 2. ESTILOS GERAIS */
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-color: var(--background);
-    color: var(--ink);
-    font-family: "Inter", sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
 }
 
-
-/* 3. NAVEGAÇÃO */
-
-.navbar {
-    z-index: 1030;
-    border-bottom: 1px solid #e5e5e5;
-    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.navbar-brand {
-    color: var(--primary-dark);
-    font-weight: 700;
+a {
+    text-decoration: none;
 }
 
-.navbar-brand img,
+/* ========================================
+   3. LOGÓTIPO
+======================================== */
+
 .logo-cesae {
     display: block;
     width: 200px;
     max-width: 100%;
     height: auto;
+    object-fit: contain;
+}
+
+/* ========================================
+   4. NAVBAR
+   Referência visual: página Cursos
+======================================== */
+
+.navbar {
+    position: relative;
+    z-index: 1030;
+    min-height: 94px;
+    padding: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
+}
+
+.navbar .container {
+    min-height: 94px;
+}
+
+.navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar .navbar-brand img,
+.navbar .logo-cesae {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Links de navegação */
+
+.navbar .navbar-nav {
+    align-items: center;
+    gap: 1.25rem;
 }
 
 .navbar .nav-link {
-    color: var(--ink);
-    font-size: 1rem;
-    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding: 12px 8px;
     border-bottom: 2px solid transparent;
+    color: #212529;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-    color: var(--primary-dark);
-    border-bottom-color: var(--primary-dark);
+    color: #7426AA;
+    border-bottom-color: #7426AA;
 }
 
+.navbar .nav-link:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 3px;
+}
 
-/* 4. BOTÃO DE PERFIL */
+/* Botão de perfil */
 
-.btn-login {
+.navbar .btn-login {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    margin-left: 0.5rem;
     padding: 0;
-    border: 0;
-    border-radius: 10px;
-    color: var(--primary-dark);
-    background-color: var(--accent);
+    color: #7426AA;
+    background-color: #f0e4fa;
+    border: none;
+    border-radius: 12px;
     font-size: 24px;
+    line-height: 1;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-login:hover {
+.navbar .btn-login:hover {
     color: #581985;
     background-color: #e5d0f5;
 }
 
+.navbar .btn-login i {
+    line-height: 1;
+}
 
-/* 5. BOTÕES PRINCIPAIS */
+.navbar .btn-login:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 3px;
+}
 
-.btn-brand,
-.purple {
-    color: #fff;
-    background-color: var(--primary-dark);
-    border: 1px solid var(--primary-dark);
-    border-radius: 9px;
+/* Botão de menu mobile */
+
+.navbar .navbar-toggler {
+    border-color: var(--cor-borda);
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(121, 40, 200, 0.2);
+}
+
+/* ========================================
+   5. BOTÕES
+======================================== */
+
+.btn-brand {
+    padding: 10px 22px;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 6px;
+    font-weight: 600;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .btn-brand:hover,
-.btn-brand:focus-visible,
-.purple:hover,
-.purple:focus-visible {
-    color: #fff;
-    background-color: #581985;
-    border-color: #581985;
+.btn-brand:focus-visible {
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
 }
 
-
-/* 6. RODAPÉ */
+/* ========================================
+   6. RODAPÉ
+======================================== */
 
 .footer-cesae {
-    color: #f5f5f5;
-    background-color: var(--footer-background);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.footer-cesae h2 {
-    color: #fff;
-    font-weight: 600;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-secundaria);
 }
 
 .footer-cesae a {
-    transition: color 0.2s ease;
+    color: var(--cor-texto-claro);
 }
 
-.footer-cesae .footer-link {
-    color: #f1f1f1;
-    text-decoration: none;
+.footer-cesae a:hover,
+.footer-cesae a:focus {
+    color: var(--cor-destaque);
 }
 
-.footer-cesae .footer-link:hover {
-    color: #cda8f0;
-    text-decoration: underline;
+.footer-cesae h2,
+.footer-cesae h3,
+.footer-cesae h4,
+.footer-cesae h5 {
+    color: var(--cor-texto-claro);
+}
+
+.footer-link {
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 .footer-list {
     padding: 0;
+    margin: 0;
+    list-style: none;
 }
-
-.footer-list li {
-    margin-bottom: 0.4rem;
-}
-
-
-/* 7. LOGÓTIPOS */
 
 .footer-logo {
-    display: block;
-    width: 220px;
-    max-width: 100%;
-    height: auto;
-}
-
-.footer-associado {
-    width: 75px;
-    height: 36px;
+    max-width: 100px;
+    max-height: 55px;
     object-fit: contain;
 }
 
-.footer-institucional {
-    width: 90px;
-    height: 32px;
+.footer-institutional-logo {
+    max-width: 130px;
+    max-height: 60px;
     object-fit: contain;
 }
 
+/* ========================================
+   7. RESPONSIVIDADE
+======================================== */
 
-/* 8. REDES SOCIAIS */
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border: 1px solid #d5d5d5;
-    border-radius: 50%;
-    color: #fff;
-    text-decoration: none;
-}
-
-.social-link:hover {
-    color: var(--footer-background);
-    background-color: #fff;
-}
-
-
-/* 9. RESPONSIVIDADE */
+/* Tablets e ecrãs mais pequenos */
 
 @media (max-width: 991.98px) {
+    .navbar,
+    .navbar .container {
+        min-height: 76px;
+    }
 
-    .navbar .navbar-collapse {
-        padding-top: 10px;
+    .navbar {
+        padding: 0.5rem 0;
     }
 
     .navbar .navbar-nav {
-        align-items: center;
-        width: 100%;
+        align-items: stretch;
+        gap: 0;
+        padding-top: 0.75rem;
     }
 
     .navbar .nav-link {
-        padding: 8px 12px;
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .navbar .nav-link.active {
+        border-bottom-color: transparent;
     }
 
     .navbar .btn-login {
-        margin-top: 8px;
-        margin-bottom: 8px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
     }
 }
 
+/* Telemóveis */
+
 @media (max-width: 767.98px) {
-
-    .navbar-brand img,
-    .logo-cesae {
-        width: 170px;
+    .navbar .navbar-brand img,
+    .navbar .logo-cesae {
+        width: 150px;
     }
 
-    .footer-logo {
-        width: 190px;
+    .footer-cesae {
+        text-align: center;
     }
 
-    .footer-institucional {
-        width: 75px;
+    .footer-cesae .footer-logo,
+    .footer-cesae .footer-institutional-logo {
+        margin: 0 auto;
+    }
+}
+
+/* Acessibilidade: reduzir animações */
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .nav-link,
+    .navbar .btn-login,
+    .btn-brand {
+        transition: none;
     }
 }
