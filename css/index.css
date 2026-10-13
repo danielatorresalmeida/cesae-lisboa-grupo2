@@ -176,3 +176,42 @@
 
     .hero-message { right: 10px; bottom: 10px; padding: 9px 11px; }
 }
+
+
+/* ========================================
+   ÁREAS DE FORMAÇÃO
+======================================== */
+
+.home-area-card {
+    border: 1px solid #ece8f2;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.home-area-card:hover {
+    border-color: #d8b9f5;
+    box-shadow: 0 4px 14px rgba(87, 38, 130, 0.08);
+}
+
+.home-area-icon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    background-color: var(--brand-light);
+    color: var(--brand);
+    font-size: 1.2rem;
+}
+
+.home-areas-link {
+    color: var(--brand);
+}
+
+.home-areas-link:hover {
+    color: var(--brand-dark);
+}
+
+.home-area-card p {
+    line-height: 1.5;
+}
