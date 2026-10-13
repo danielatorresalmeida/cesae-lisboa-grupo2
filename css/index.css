@@ -215,3 +215,15 @@
 .home-area-card p {
     line-height: 1.5;
 }
+
+/* ========================================
+   PORQUÊ ESCOLHER O CESAE DIGITAL
+======================================== */
+
+.home-benefit-icon {
+    width: 52px;
+    height: 52px;
+    background-color: var(--brand-light);
+    color: var(--brand);
+    font-size: 1.35rem;
+}
