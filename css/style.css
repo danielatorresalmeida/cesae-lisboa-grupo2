@@ -1,12 +1,9 @@
-/*
- * CESAE DIGITAL — CSS GLOBAL
- * Estilos partilhados entre as páginas do projeto
- */
-
-
 /* ========================================
-   1. VARIÁVEIS GLOBAIS
+   CESAE DIGITAL — ESTILOS GLOBAIS
 ======================================== */
+
+
+/* 1. CORES */
 
 :root {
     --primary: #7B2CBF;
@@ -14,15 +11,11 @@
     --accent: #f0e4fa;
     --ink: #212529;
     --background: #ffffff;
-    --surface: #ffffff;
     --footer-background: #34373A;
-    --footer-border: rgba(255, 255, 255, 0.18);
 }
 
 
-/* ========================================
-   2. ESTILOS GERAIS
-======================================== */
+/* 2. ESTILOS GERAIS */
 
 body {
     background-color: var(--background);
@@ -32,14 +25,10 @@ body {
 }
 
 
-/* ========================================
-   3. NAVEGAÇÃO
-======================================== */
+/* 3. NAVEGAÇÃO */
 
 .navbar {
-    position: relative;
     z-index: 1030;
-    background-color: var(--surface);
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 2px 14px rgba(41, 36, 58, 0.06);
 }
@@ -47,7 +36,6 @@ body {
 .navbar-brand {
     color: var(--primary-dark);
     font-weight: 700;
-    letter-spacing: -0.03em;
 }
 
 .navbar-brand img,
@@ -56,15 +44,13 @@ body {
     width: 200px;
     max-width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
 .navbar .nav-link {
     color: var(--ink);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     border-bottom: 2px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .navbar .nav-link:hover,
@@ -74,9 +60,7 @@ body {
 }
 
 
-/* ========================================
-   4. BOTÃO DE PERFIL
-======================================== */
+/* 4. BOTÃO DE PERFIL */
 
 .btn-login {
     display: inline-flex;
@@ -85,77 +69,57 @@ body {
     width: 44px;
     height: 44px;
     padding: 0;
-    background-color: var(--accent);
-    color: var(--primary-dark);
-    border: none;
+    border: 0;
     border-radius: 10px;
-    text-decoration: none;
+    color: var(--primary-dark);
+    background-color: var(--accent);
     font-size: 24px;
-    line-height: 1;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
 }
 
 .btn-login:hover {
-    background-color: #e5d0f5;
     color: #581985;
-}
-
-.btn-login i {
-    line-height: 1;
+    background-color: #e5d0f5;
 }
 
 
-/* ========================================
-   5. BOTÕES PRINCIPAIS
-======================================== */
+/* 5. BOTÕES PRINCIPAIS */
 
 .btn-brand,
 .purple {
+    color: #fff;
     background-color: var(--primary-dark);
-    color: #ffffff;
     border: 1px solid var(--primary-dark);
     border-radius: 9px;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-brand:hover,
-.purple:hover,
 .btn-brand:focus-visible,
+.purple:hover,
 .purple:focus-visible {
+    color: #fff;
     background-color: #581985;
-    color: #ffffff;
     border-color: #581985;
 }
 
 
-/* ========================================
-   6. FOOTER
-======================================== */
+/* 6. RODAPÉ */
 
 .footer-cesae {
-    background-color: var(--footer-background);
     color: #f5f5f5;
+    background-color: var(--footer-background);
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
 .footer-cesae h2 {
-    color: #ffffff;
+    color: #fff;
     font-weight: 600;
 }
 
-.footer-cesae p {
-    line-height: 1.5;
-}
-
 .footer-cesae a {
-    transition: color 0.2s ease, background-color 0.2s ease;
+    transition: color 0.2s ease;
 }
-
-
-/* ========================================
-   7. LINKS DO FOOTER
-======================================== */
 
 .footer-cesae .footer-link {
     color: #f1f1f1;
@@ -167,110 +131,61 @@ body {
     text-decoration: underline;
 }
 
-.footer-cesae .footer-list {
+.footer-list {
     padding: 0;
-    margin-top: 0;
 }
 
-.footer-cesae .footer-list li {
-    margin-bottom: 0.3rem;
-}
-
-.footer-cesae .footer-list li:last-child {
-    margin-bottom: 0;
+.footer-list li {
+    margin-bottom: 0.4rem;
 }
 
 
-/* ========================================
-   8. LOGÓTIPOS DO FOOTER
-======================================== */
+/* 7. LOGÓTIPOS */
 
-/* Logótipo principal do footer */
-.footer-cesae .footer-logo {
-display: block;
-width: 240px;
-max-width: 100%;
-height: auto;
-object-fit: contain;
-filter: none;
-opacity: 1;
-margin-bottom: 1rem;
-}
-
-.footer-cesae .footer-associado {
+.footer-logo {
     display: block;
-    width: 80px;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-associado {
+    width: 75px;
     height: 36px;
     object-fit: contain;
-    object-position: center;
 }
 
-.footer-cesae .footer-institucional {
-    display: block;
-    width: 105px;
+.footer-institucional {
+    width: 90px;
     height: 32px;
     object-fit: contain;
-    object-position: center;
-    flex-shrink: 0;
 }
 
 
-/* ========================================
-   9. REDES SOCIAIS
-======================================== */
+/* 8. REDES SOCIAIS */
 
-.footer-cesae .social-link {
+.social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
     width: 38px;
     height: 38px;
-    color: #ffffff;
     border: 1px solid #d5d5d5;
     border-radius: 50%;
-    font-size: 1rem;
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.footer-cesae .social-link:hover {
-    background-color: #ffffff;
+.social-link:hover {
     color: var(--footer-background);
+    background-color: #fff;
 }
 
 
-/* ========================================
-   10. NEWSLETTER E SEPARADORES
-======================================== */
-
-.footer-cesae .btn-light {
-    color: var(--footer-background);
-    background-color: #ffffff;
-    border-color: #ffffff;
-}
-
-.footer-cesae .btn-light:hover {
-    color: #ffffff;
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
-}
-
-.footer-cesae .border-secondary {
-    border-color: var(--footer-border) !important;
-}
-
-.footer-cesae .border-top,
-.footer-cesae .border-bottom {
-    border-color: var(--footer-border) !important;
-}
-
-
-/* ========================================
-   11. RESPONSIVIDADE
-======================================== */
+/* 9. RESPONSIVIDADE */
 
 @media (max-width: 991.98px) {
+
     .navbar .navbar-collapse {
         padding-top: 10px;
     }
@@ -291,22 +206,17 @@ margin-bottom: 1rem;
 }
 
 @media (max-width: 767.98px) {
-    .footer-cesae .footer-logo {
+
+    .navbar-brand img,
+    .logo-cesae {
+        width: 170px;
+    }
+
+    .footer-logo {
         width: 190px;
     }
 
-    .footer-cesae .footer-associado {
+    .footer-institucional {
         width: 75px;
-        height: 32px;
-    }
-
-    .footer-cesae .footer-institucional {
-        width: 85px;
-        height: 28px;
-    }
-
-    .footer-cesae .social-link {
-        width: 36px;
-        height: 36px;
     }
 }

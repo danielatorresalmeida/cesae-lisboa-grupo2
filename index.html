@@ -1,191 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>CESAE Digital | Início</title>
+    <meta name="description" content="Descobre a formação profissional do CESAE Digital e desenvolve competências para o mercado de trabalho.">
+
     <link rel="icon" href="../images/icons/favicon.png" type="image/png">
 
+    <!-- Tipografia -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+    <!-- CSS do projeto -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
 
-    <!-- NAVEGAÇÃO -->
-    <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+    <!-- ========================================
+         1. NAVEGAÇÃO
+    ========================================= -->
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-white">
         <div class="container">
+
             <a class="navbar-brand me-auto" href="index.html">
-                <img src="../images/icons/cesae-digital-logo1.png" alt="CESAE Digital" class="logo-cesae">
+                <img src="../images/icons/cesae-digital-logo1.png"
+                     alt="CESAE Digital"
+                     class="logo-cesae">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="mainNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                        <a class="nav-link active"
+                           aria-current="page"
+                           href="index.html">Início</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="pages/cursos.html">Cursos</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="pages/parceiros.html">Parceiros</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="pages/contactos.html">Contactos</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="btn-login ms-lg-2" href="login.html" aria-label="Iniciar sessão">
-                            <i class="bi bi-person"></i>
+                        <a class="btn-login ms-lg-2"
+                           href="login.html"
+                           aria-label="Iniciar sessão">
+                            <i class="bi bi-person" aria-hidden="true"></i>
                         </a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="pt-3">
 
-        <!-- BANNER -->
-        <section class="home-hero position-relative overflow-hidden w-100" aria-labelledby="home-hero-title">
+    <main>
 
-            <img src="images/cursos/Header_Pag_Cursos.png" alt="" aria-hidden="true"
-                class="home-hero-image position-absolute top-0 start-0 w-100 h-100">
+        <!-- ========================================
+             2. BANNER PRINCIPAL
+             Imagem de fundo com texto sobreposto.
+        ========================================= -->
 
-            <div class="container position-relative py-5">
+        <section class="home-hero" aria-labelledby="home-hero-title">
+
+            <img src="images/cursos/Header_Pag_Cursos.png"
+                 alt=""
+                 aria-hidden="true"
+                 class="home-hero-image">
+
+            <div class="home-hero-shade" aria-hidden="true"></div>
+
+            <div class="container home-hero-container">
                 <div class="home-hero-content">
 
-                    <span class="home-hero-label badge rounded-pill mb-2">
-                        FORMAÇÃO PROFISSIONAL
+                    <span class="badge rounded-pill home-hero-label mb-3">
+                        CESAE DIGITAL
                     </span>
 
-                    <h1 id="home-hero-title" class="fw-bold mb-2">
-                        Constrói o teu
-                        <span>futuro</span>
+                    <h1 id="home-hero-title" class="fw-bold mb-3">
+                        O teu próximo passo
+                        <span>começa aqui.</span>
                     </h1>
 
-                    <p class="home-hero-description mb-3 d-none d-md-block">
-                        Formação prática e atual, com ligação direta ao mercado de trabalho.
+                    <p class="home-hero-description mb-4">
+                        Formação prática e atual, ligada ao mercado de trabalho.
                     </p>
 
-                    <div class="home-hero-actions d-flex align-items-center gap-2">
+                    <div class="home-hero-actions d-flex flex-column flex-sm-row gap-2">
+
                         <a href="pages/cursos.html" class="btn btn-brand">
                             Explorar cursos
-                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
                         </a>
 
                         <a href="pages/contactos.html" class="btn home-hero-secondary">
                             Fale connosco
                         </a>
-                    </div>
 
+                    </div>
                 </div>
+            </div>
+
+            <!-- Mensagem sobre a imagem -->
+
+            <div class="home-hero-note">
+                <i class="bi bi-stars" aria-hidden="true"></i>
+                <span>
+                    <strong>Aprende hoje.</strong>
+                    <br>
+                    Conquista amanhã.
+                </span>
             </div>
 
         </section>
 
-        <!-- IMPACTO DO CESAE DIGITAL -->
-        <section class="home-impact py-5 py-lg-6" aria-labelledby="impact-title">
+
+        <!-- ========================================
+             3. IMPACTO INSTITUCIONAL
+        ========================================= -->
+
+        <section class="home-impact py-4 py-md-5"
+                 aria-labelledby="impact-title">
+
             <div class="container">
 
-                <!-- SETOR 1: Mensagem institucional -->
-                <div class="home-impact-heading mb-4 mb-lg-5">
-                    <div class="row align-items-end g-3">
-                        <div class="col-12 col-lg-7">
-                            <span class="home-impact-eyebrow d-inline-flex align-items-center mb-3">
-                                <span aria-hidden="true"></span>
-                                O NOSSO IMPACTO
-                            </span>
+                <!-- Mensagem institucional -->
 
-                            <h2 id="impact-title" class="home-impact-title fw-bold mb-0">
-                                Mais do que formação.<br>
-                                <span>Criamos oportunidades.</span>
-                            </h2>
-                        </div>
+                <div class="row align-items-end g-3 mb-4 mb-xl-5">
 
-                        <div class="col-12 col-lg-5">
-                            <p class="home-impact-intro mb-0">
-                                Desenvolvemos competências que ajudam pessoas, empresas e comunidades
-                                a responder aos desafios de um mundo em transformação.
-                            </p>
-                        </div>
+                    <div class="col-12 col-lg-7">
+
+                        <span class="home-impact-eyebrow">
+                            <span aria-hidden="true"></span>
+                            O NOSSO IMPACTO
+                        </span>
+
+                        <h2 id="impact-title" class="home-impact-title fw-bold mb-0">
+                            Mais do que formação.
+                            <span class="d-block">Criamos oportunidades.</span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+
+                        <p class="home-impact-intro mb-0">
+                            Desenvolvemos competências que ajudam pessoas,
+                            empresas e comunidades a responder aos desafios
+                            de um mundo em transformação.
+                        </p>
+
                     </div>
                 </div>
 
-                <!-- SETOR 2: Três dimensões do impacto -->
-                <div class="row row-cols-1 row-cols-md-3 g-3 home-impact-grid mb-4 mb-lg-5">
+
+                <!-- Três dimensões do impacto -->
+
+                <div class="row row-cols-1 row-cols-md-3 g-3 g-xl-4 mb-4 mb-xl-5">
+
                     <div class="col">
                         <article class="home-impact-card h-100">
+
                             <div class="home-impact-card-top">
                                 <span class="home-impact-number">01</span>
                                 <span class="home-impact-icon" aria-hidden="true">
                                     <i class="bi bi-graph-up-arrow"></i>
                                 </span>
                             </div>
-                            <h3 class="h5 fw-bold">Transformação profissional</h3>
+
+                            <h3 class="fw-bold">Transformação profissional</h3>
+
                             <p class="mb-0">
-                                Novas competências para explorar oportunidades, evoluir na carreira
-                                e preparar o próximo passo profissional.
+                                Novas competências para explorar oportunidades,
+                                evoluir na carreira e preparar o próximo passo
+                                profissional.
                             </p>
-                            <span class="home-impact-card-accent" aria-hidden="true"></span>
+
                         </article>
                     </div>
 
                     <div class="col">
                         <article class="home-impact-card h-100">
+
                             <div class="home-impact-card-top">
                                 <span class="home-impact-number">02</span>
                                 <span class="home-impact-icon" aria-hidden="true">
                                     <i class="bi bi-laptop"></i>
                                 </span>
                             </div>
-                            <h3 class="h5 fw-bold">Inclusão digital</h3>
+
+                            <h3 class="fw-bold">Inclusão digital</h3>
+
                             <p class="mb-0">
-                                Mais acesso ao conhecimento e às ferramentas digitais necessárias
-                                para participar numa sociedade cada vez mais tecnológica.
+                                Conhecimento e ferramentas digitais para participar
+                                numa sociedade cada vez mais tecnológica.
                             </p>
-                            <span class="home-impact-card-accent" aria-hidden="true"></span>
+
                         </article>
                     </div>
 
                     <div class="col">
                         <article class="home-impact-card h-100">
+
                             <div class="home-impact-card-top">
                                 <span class="home-impact-number">03</span>
                                 <span class="home-impact-icon" aria-hidden="true">
                                     <i class="bi bi-buildings"></i>
                                 </span>
                             </div>
-                            <h3 class="h5 fw-bold">Ligação às empresas</h3>
+
+                            <h3 class="fw-bold">Ligação às empresas</h3>
+
                             <p class="mb-0">
-                                Aproximamos a formação das necessidades das organizações e dos
-                                desafios reais do mercado de trabalho.
+                                Formação mais próxima das necessidades das
+                                organizações e dos desafios do mercado de trabalho.
                             </p>
-                            <span class="home-impact-card-accent" aria-hidden="true"></span>
+
                         </article>
                     </div>
+
                 </div>
 
-                <!-- SETOR 3: Impacto nas pessoas, empresas e sociedade -->
-                <div class="home-impact-strip" aria-label="Áreas de impacto do CESAE Digital">
+
+                <!-- Pessoas, empresas e sociedade -->
+
+                <div class="home-impact-strip">
+
                     <div class="home-impact-strip-item">
                         <span class="home-impact-strip-icon" aria-hidden="true">
                             <i class="bi bi-person-heart"></i>
                         </span>
+
                         <div>
-                            <h3 class="h6 fw-bold mb-1">Pessoas</h3>
-                            <p class="mb-0">Conhecimento para crescer e construir novos caminhos.</p>
+                            <h3 class="fw-bold mb-1">Pessoas</h3>
+                            <p class="mb-0">
+                                Conhecimento para crescer e construir novos caminhos.
+                            </p>
                         </div>
                     </div>
 
@@ -193,9 +272,12 @@
                         <span class="home-impact-strip-icon" aria-hidden="true">
                             <i class="bi bi-building-check"></i>
                         </span>
+
                         <div>
-                            <h3 class="h6 fw-bold mb-1">Empresas</h3>
-                            <p class="mb-0">Competências que acompanham a evolução do trabalho.</p>
+                            <h3 class="fw-bold mb-1">Empresas</h3>
+                            <p class="mb-0">
+                                Competências que acompanham a evolução do trabalho.
+                            </p>
                         </div>
                     </div>
 
@@ -203,121 +285,436 @@
                         <span class="home-impact-strip-icon" aria-hidden="true">
                             <i class="bi bi-globe-europe-africa"></i>
                         </span>
+
                         <div>
-                            <h3 class="h6 fw-bold mb-1">Sociedade</h3>
-                            <p class="mb-0">Mais preparação para a transformação digital.</p>
+                            <h3 class="fw-bold mb-1">Sociedade</h3>
+                            <p class="mb-0">
+                                Mais preparação para a transformação digital.
+                            </p>
                         </div>
                     </div>
+
                 </div>
 
             </div>
         </section>
 
-        <!-- NEWSLETTER -->
-        <section class="home-newsletter text-center text-white bg-dark py-4">
+
+        <!-- ========================================
+             4. CURSOS EM DESTAQUE
+             Secção única de exploração da formação.
+        ========================================= -->
+
+        <section class="home-courses py-4 py-md-5"
+                 aria-labelledby="courses-title">
+
             <div class="container">
-                <h2 class="h4 fw-bold mb-2">
-                    Quer estar sempre a par das últimas novidades?
+
+                <div class="home-courses-heading d-flex flex-column flex-lg-row
+                            justify-content-between align-items-lg-end
+                            gap-3 mb-4 mb-xl-5">
+
+                    <div>
+                        <span class="home-section-eyebrow">
+                            A TUA PRÓXIMA ETAPA
+                        </span>
+
+                        <h2 id="courses-title" class="home-section-title fw-bold mb-3">
+                            Encontra o teu próximo desafio.
+                        </h2>
+
+                        <p class="home-courses-intro mb-0">
+                            Explora áreas de formação e desenvolve competências
+                            para o teu futuro profissional.
+                        </p>
+                    </div>
+
+                    <a href="pages/cursos.html"
+                       class="btn btn-brand flex-shrink-0">
+                        Explorar todos os cursos
+                        <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- Cartões de formação -->
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3
+                            g-3 g-xl-4">
+
+                    <div class="col">
+                        <article class="home-course-card h-100">
+
+                            <div class="home-course-icon" aria-hidden="true">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+
+                            <div class="home-course-content">
+
+                                <span class="home-course-category">
+                                    Tecnologia
+                                </span>
+
+                                <h3>Desenvolvimento digital</h3>
+
+                                <p>
+                                    Explora competências para criar soluções digitais.
+                                </p>
+
+                                <a href="pages/cursos.html" class="home-card-link">
+                                    Explorar cursos
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col">
+                        <article class="home-course-card h-100">
+
+                            <div class="home-course-icon" aria-hidden="true">
+                                <i class="bi bi-megaphone"></i>
+                            </div>
+
+                            <div class="home-course-content">
+
+                                <span class="home-course-category">
+                                    Marketing
+                                </span>
+
+                                <h3>Marketing digital</h3>
+
+                                <p>
+                                    Desenvolve competências para comunicar no digital.
+                                </p>
+
+                                <a href="pages/cursos.html" class="home-card-link">
+                                    Explorar cursos
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        </article>
+                    </div>
+
+
+                    <div class="col">
+                        <article class="home-course-card h-100">
+
+                            <div class="home-course-icon" aria-hidden="true">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+
+                            <div class="home-course-content">
+
+                                <span class="home-course-category">
+                                    Competências profissionais
+                                </span>
+
+                                <h3>Novas oportunidades</h3>
+
+                                <p>
+                                    Prepara-te para os desafios do mercado de trabalho.
+                                </p>
+
+                                <a href="pages/cursos.html" class="home-card-link">
+                                    Explorar cursos
+                                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                </a>
+
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             5. PARCERIAS
+        ========================================= -->
+
+        <section class="home-partners py-4 py-md-5"
+                 aria-labelledby="partners-title">
+
+            <div class="container">
+
+                <div class="row align-items-center g-4 g-xl-5">
+
+                    <div class="col-12 col-lg-6">
+
+                        <span class="home-section-eyebrow">
+                            TRABALHAMOS EM REDE
+                        </span>
+
+                        <h2 id="partners-title" class="home-section-title fw-bold mb-3">
+                            Ligados às pessoas e às empresas.
+                        </h2>
+
+                        <p class="home-partners-description mb-3">
+                            A colaboração com entidades e organizações ajuda
+                            a aproximar a formação das necessidades do mercado
+                            de trabalho.
+                        </p>
+
+                        <a href="pages/parceiros.html" class="home-card-link">
+                            Conhecer parceiros
+                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+
+                        <div class="home-partners-logos"
+                             aria-label="Entidades associadas">
+
+                            <img src="../images/footer/iefp.png"
+                                 alt="IEFP"
+                                 loading="lazy">
+
+                            <img src="../images/footer/aep.png"
+                                 alt="AEP"
+                                 loading="lazy">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             6. CHAMADA PARA AÇÃO
+        ========================================= -->
+
+        <section class="home-newsletter text-white text-center py-4 py-md-5"
+                 aria-labelledby="newsletter-title">
+
+            <div class="container">
+
+                <span class="home-cta-eyebrow">COMEÇA AGORA</span>
+
+                <h2 id="newsletter-title" class="home-cta-title fw-bold mb-3">
+                    O teu futuro começa com uma oportunidade.
                 </h2>
 
-                <p class="small mb-3 mx-auto">
-                    Subscreva a nossa newsletter e receba regularmente as nossas notícias
-                    e o plano de formação. A inscrição é gratuita!
+                <p class="home-cta-description mb-4 mx-auto">
+                    Consulta a oferta formativa ou entra em contacto connosco
+                    para saber mais.
                 </p>
 
-                <a href="#" class="btn btn-light rounded-pill px-4">
-                    Subscrever newsletter
-                </a>
+                <div class="d-flex flex-column flex-sm-row
+                            justify-content-center gap-2">
+
+                    <a href="pages/cursos.html"
+                       class="btn btn-light rounded-pill px-4">
+                        Ver cursos
+                        <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>
+                    </a>
+
+                    <a href="pages/contactos.html"
+                       class="btn home-cta-secondary rounded-pill px-4">
+                        Fale connosco
+                    </a>
+
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- RODAPÉ -->
-    <footer class="footer-cesae bg-dark text-white">
 
-        <div class="container py-4">
-            <div class="row g-4">
+    <!-- ========================================
+         7. RODAPÉ
+    ========================================= -->
 
-                <section class="col-12 col-md-4">
-                    <img src="../images/icons/cesae-digital-logo-white.png" alt="CESAE Digital"
-                        class="footer-logo mb-3">
+    <footer class="footer-cesae">
 
-                    <p class="small mb-2">
-                        Somos, há 40 anos, o parceiro das empresas para a formação e qualificação.
+        <div class="container py-4 py-xl-5">
+
+            <div class="row g-4 g-xl-5">
+
+                <!-- Contactos e redes sociais -->
+
+                <section class="col-12 col-md-5 col-lg-4"
+                         aria-labelledby="footer-about-title">
+
+                    <img src="../images/icons/cesae-digital-logo-white.png"
+                         alt="CESAE Digital"
+                         class="footer-logo mb-3">
+
+                    <h2 id="footer-about-title" class="visually-hidden">
+                        Sobre o CESAE Digital
+                    </h2>
+
+                    <p class="small mb-3">
+                        Somos, há 40 anos, o parceiro das empresas para a
+                        formação e qualificação.
                     </p>
 
                     <address class="small mb-3">
                         Telefone:
-                        <a href="tel:+351226195200" class="footer-link">226 195 200</a>
+                        <a href="tel:+351226195200" class="footer-link">
+                            226 195 200
+                        </a>
+
                         <br>
+
                         Email:
-                        <a href="mailto:geral@cesae.pt" class="footer-link">geral@cesae.pt</a>
+                        <a href="mailto:geral@cesae.pt" class="footer-link">
+                            geral@cesae.pt
+                        </a>
                     </address>
 
                     <h2 class="h6 mb-2">Associados</h2>
 
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <img src="../images/footer/iefp.png" alt="IEFP" class="footer-associado">
-                        <img src="../images/footer/aep.png" alt="AEP" class="footer-associado">
+
+                        <img src="../images/footer/iefp.png"
+                             alt="IEFP"
+                             class="footer-associado"
+                             loading="lazy">
+
+                        <img src="../images/footer/aep.png"
+                             alt="AEP"
+                             class="footer-associado"
+                             loading="lazy">
+
                     </div>
 
                     <nav aria-label="Redes sociais" class="d-flex gap-3">
-                        <a href="#" class="footer-link" aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
+
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="footer-link" aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
+
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="bi bi-facebook" aria-hidden="true"></i>
                         </a>
-                        <a href="#" class="footer-link" aria-label="LinkedIn">
-                            <i class="bi bi-linkedin"></i>
+
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
                         </a>
+
                     </nav>
+
                 </section>
 
-                <nav class="col-6 col-md-4" aria-label="CESAE Digital">
+
+                <!-- Navegação institucional -->
+
+                <nav class="col-6 col-md-3 col-lg-4"
+                     aria-label="CESAE Digital">
+
                     <h2 class="h6 fw-bold">CESAE Digital</h2>
+
                     <ul class="list-unstyled footer-list mb-0">
-                        <li><a href="pages/cursos.html" class="footer-link">Cursos</a></li>
-                        <li><a href="pages/parceiros.html" class="footer-link">Parceiros</a></li>
-                        <li><a href="pages/contactos.html" class="footer-link">Contactos</a></li>
-                        <li><a href="#" class="footer-link">Notícias</a></li>
-                        <li><a href="#" class="footer-link">O Centro</a></li>
+                        <li>
+                            <a href="pages/cursos.html" class="footer-link">Cursos</a>
+                        </li>
+                        <li>
+                            <a href="pages/parceiros.html" class="footer-link">Parceiros</a>
+                        </li>
+                        <li>
+                            <a href="pages/contactos.html" class="footer-link">Contactos</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Notícias</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">O Centro</a>
+                        </li>
                     </ul>
+
                 </nav>
 
-                <nav class="col-6 col-md-4" aria-label="Informações legais">
+
+                <!-- Informações legais -->
+
+                <nav class="col-6 col-md-4 col-lg-4"
+                     aria-label="Informações legais">
+
                     <h2 class="h6 fw-bold">Informações</h2>
+
                     <ul class="list-unstyled footer-list mb-0">
-                        <li><a href="#" class="footer-link">Política de Cookies</a></li>
-                        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
-                        <li><a href="#" class="footer-link">Termos e Condições</a></li>
-                        <li><a href="#" class="footer-link">Livro de Reclamações</a></li>
+                        <li>
+                            <a href="#" class="footer-link">Política de Cookies</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Política de Privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Termos e Condições</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Livro de Reclamações</a>
+                        </li>
                     </ul>
+
                 </nav>
 
             </div>
         </div>
 
-        <section class="container py-3 border-top border-secondary" aria-label="Entidades institucionais">
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
-                <img src="../images/footer/apoio-1.png" alt="Entidade institucional 1" class="footer-institucional">
-                <img src="../images/footer/apoio-2.png" alt="Entidade institucional 2" class="footer-institucional">
-                <img src="../images/footer/apoio-3.png" alt="Entidade institucional 3" class="footer-institucional">
-                <img src="../images/footer/apoio-4.png" alt="Entidade institucional 4" class="footer-institucional">
+
+        <!-- Entidades institucionais -->
+
+        <div class="container py-3 border-top border-secondary"
+             aria-label="Entidades institucionais">
+
+            <div class="footer-institutional-logos
+                        d-flex flex-wrap justify-content-center
+                        align-items-center gap-4">
+
+                <img src="../images/footer/apoio-1.png"
+                     alt="Entidade institucional"
+                     class="footer-institucional"
+                     loading="lazy">
+
+                <img src="../images/footer/apoio-2.png"
+                     alt="Entidade institucional"
+                     class="footer-institucional"
+                     loading="lazy">
+
+                <img src="../images/footer/apoio-3.png"
+                     alt="Entidade institucional"
+                     class="footer-institucional"
+                     loading="lazy">
+
+                <img src="../images/footer/apoio-4.png"
+                     alt="Entidade institucional"
+                     class="footer-institucional"
+                     loading="lazy">
+
             </div>
-        </section>
+        </div>
+
+
+        <!-- Direitos de autor -->
 
         <div class="container text-center py-3">
+
             <p class="small mb-0">
                 Copyright © 2025 CESAE. Todos os direitos reservados.
             </p>
+
         </div>
 
     </footer>
 
+
+    <!-- Bootstrap JavaScript -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
