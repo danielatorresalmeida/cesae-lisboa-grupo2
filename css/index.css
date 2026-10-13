@@ -1,5 +1,6 @@
 /* CESAE Digital — estilos exclusivos da página inicial
-   O Bootstrap trata da grelha, espaçamento, tipografia e componentes. */
+   Bootstrap 5.3 prioritário.
+   CSS próprio apenas para detalhes específicos do design. */
 
 :root {
     --brand: #7928c8;
@@ -9,9 +10,13 @@
     --muted: #64647a;
 }
 
-/* Banner: a imagem e o gradiente são específicos do design. */
+/* ========================================
+   BANNER INSTITUCIONAL
+======================================== */
+
 .home-hero {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -19,19 +24,27 @@
 .home-hero-image {
     position: absolute;
     inset: 0;
+    z-index: -2;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-
 .home-hero::before {
     position: absolute;
     inset: 0;
     z-index: -1;
     content: "";
-    background: linear-gradient(90deg, #fbf9ff 0%, #fbf9ff 23%, rgba(251,249,255,.96) 35%, rgba(251,249,255,.78) 45%, rgba(251,249,255,.18) 60%, transparent 76%);
+    background: linear-gradient(
+        90deg,
+        #fbf9ff 0%,
+        #fbf9ff 23%,
+        rgba(251, 249, 255, 0.96) 35%,
+        rgba(251, 249, 255, 0.78) 45%,
+        rgba(251, 249, 255, 0.18) 60%,
+        transparent 76%
+    );
     pointer-events: none;
 }
 
@@ -57,14 +70,14 @@
     background: var(--brand-light);
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: .03em;
+    letter-spacing: 0.03em;
 }
 
 .home-hero h1 {
     color: var(--ink);
     font-size: clamp(34px, 3.2vw, 44px);
     line-height: 1.02;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
 }
 
 .home-hero h1 span {
@@ -78,6 +91,8 @@
     font-size: 14px;
     line-height: 1.5;
 }
+
+/* Botões */
 
 .btn-brand {
     color: #fff;
@@ -105,6 +120,8 @@
     border-color: var(--brand);
 }
 
+/* Mensagem sobre a imagem */
+
 .hero-message {
     position: absolute;
     right: 18px;
@@ -115,11 +132,13 @@
     padding: 10px 14px;
     border-radius: 8px;
     color: #27213a;
-    background: rgba(255,255,255,.97);
-    box-shadow: 0 4px 14px rgba(39,22,67,.12);
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 4px 14px rgba(39, 22, 67, 0.12);
     font-size: 11px;
     line-height: 1.4;
 }
+
+/* Banner mobile */
 
 @media (max-width: 767.98px) {
     .home-hero {
@@ -134,8 +153,18 @@
     .home-hero-image {
         top: 115px;
         height: 225px;
-        object-fit: cover;
         object-position: 58% center;
+    }
+
+    .home-hero::before {
+        background: linear-gradient(
+            180deg,
+            #fbf9ff 0%,
+            rgba(251, 249, 255, 0.97) 30%,
+            rgba(251, 249, 255, 0.72) 48%,
+            rgba(251, 249, 255, 0.08) 75%,
+            transparent 100%
+        );
     }
 
     .home-hero h1 {
@@ -146,84 +175,240 @@
     }
 
     .home-hero-actions {
+        display: flex;
         flex-wrap: nowrap;
         gap: 0.5rem;
     }
 
     .home-hero-actions .btn {
-        white-space: nowrap;
         flex-shrink: 0;
         padding: 0.65rem 0.75rem;
         font-size: 0.875rem;
+        white-space: nowrap;
     }
 }
 
 @media (max-width: 380px) {
-    .home-hero { height: 455px; }
+    .home-hero {
+        height: 455px;
+    }
 
     .home-hero .container {
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
     }
 
-    .home-hero-actions {
-        flex-wrap: nowrap;
+    .hero-message {
+        right: 10px;
+        bottom: 10px;
+        padding: 9px 11px;
     }
-    .home-hero-actions .btn {
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
-
-    .hero-message { right: 10px; bottom: 10px; padding: 9px 11px; }
 }
-
 
 /* ========================================
    ÁREAS DE FORMAÇÃO
 ======================================== */
 
-.home-area-card {
+.home-areas {
+    padding-top: 1rem !important;
+    padding-bottom: 1.25rem !important;
+}
+
+.home-areas .container {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+/* Cabeçalho compacto */
+
+.home-areas h2 {
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.home-areas .home-areas-link {
+    color: var(--brand);
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.home-areas .home-areas-link:hover {
+    color: var(--brand-dark);
+}
+
+/* Grelha: quatro cartões em todos os ecrãs */
+
+.home-areas .row {
+    --bs-gutter-x: 0.5rem;
+    --bs-gutter-y: 0.5rem;
+}
+
+.home-areas .home-area-card {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+    color: var(--ink);
+    background: #fff;
     border: 1px solid #ece8f2;
-    border-radius: 0.75rem;
-    background-color: #fff;
+    border-radius: 0.55rem;
+    box-shadow: none;
     transition: border-color 0.2s ease,
                 box-shadow 0.2s ease;
 }
 
-.home-area-card:hover {
+.home-areas .home-area-card:hover {
+    color: var(--ink);
     border-color: #d8b9f5;
-    box-shadow: 0 4px 14px rgba(87, 38, 130, 0.08);
+    box-shadow: 0 4px 12px rgba(87, 38, 130, 0.07);
 }
 
-.home-area-icon {
-    width: 42px;
-    height: 42px;
+/* Conteúdo dos cartões */
+
+.home-areas .home-area-card .card-body {
+    min-width: 0;
+    padding: 0.6rem 0.3rem !important;
+}
+
+/* Ícones circulares */
+
+.home-areas .home-area-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    background-color: var(--brand-light);
+    width: 36px;
+    height: 36px;
+    margin: 0 auto 0.6rem !important;
+    border-radius: 50%;
     color: var(--brand);
-    font-size: 1.2rem;
+    background: var(--brand-light);
+    font-size: 1rem;
 }
 
-.home-areas-link {
+/* Títulos */
+
+.home-areas .home-area-card h3 {
+    min-height: 2.4em;
+    margin-bottom: 0.35rem;
+    color: var(--ink);
+    font-size: 0.65rem;
+    line-height: 1.25;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+}
+
+/* Descrições ocultas no mobile */
+
+.home-areas .home-area-card p {
+    display: none;
+}
+
+/* Links no rodapé dos cartões */
+
+.home-areas .home-area-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    gap: 0.15rem;
+    padding-top: 0.5rem;
+    border-top: 0;
     color: var(--brand);
+    font-size: 0.58rem;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
-.home-areas-link:hover {
-    color: var(--brand-dark);
+.home-areas .home-area-footer .bi {
+    font-size: 0.65rem;
 }
 
-.home-area-card p {
-    line-height: 1.5;
+/* Acessibilidade */
+
+.home-areas .home-area-card:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+}
+
+/* Áreas de formação em tablets e computadores */
+
+@media (min-width: 768px) {
+    .home-areas {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .home-areas .home-areas-link {
+        font-size: 0.875rem;
+    }
+
+    .home-areas .home-area-card {
+        border-radius: 0.75rem;
+    }
+
+    .home-areas .home-area-card .card-body {
+        padding: 1.5rem !important;
+    }
+
+    .home-areas .home-area-icon {
+        width: 52px;
+        height: 52px;
+        margin: 0 0 1rem !important;
+        border-radius: 16px;
+        font-size: 1.4rem;
+    }
+
+    .home-areas .home-area-card h3 {
+        min-height: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .home-areas .home-area-card p {
+        display: block;
+        margin-bottom: 1rem !important;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .home-areas .home-area-footer {
+        justify-content: space-between !important;
+        gap: 0.5rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid #f0edf4;
+        font-size: 0.8rem;
+    }
+
+    .home-areas .home-area-footer .bi {
+        font-size: 0.85rem;
+    }
 }
 
 /* ========================================
-   PORQUÊ ESCOLHER O CESAE DIGITAL
+   BENEFÍCIOS INSTITUCIONAIS
 ======================================== */
 
 .home-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 52px;
     height: 52px;
-    background-color: var(--brand-light);
+    border-radius: 50%;
     color: var(--brand);
+    background-color: var(--brand-light);
     font-size: 1.35rem;
+}
+
+/* ========================================
+   MOVIMENTO REDUZIDO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .home-area-card {
+        transition: none;
+    }
 }
