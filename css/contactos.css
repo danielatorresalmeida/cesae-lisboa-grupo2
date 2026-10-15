@@ -55,30 +55,6 @@ body {
     border-bottom: 2px solid #7426AA;
 }
 
-/* Botão de login */
-.btn-login {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: #f0e4fa;
-    color: #7426AA;
-
-    border-radius: 10px;
-
-    width: 44px;
-    height: 44px;
-
-    text-decoration: none;
-    font-size: 24px;
-}
-
-.btn-login:hover {
-    background-color: #e5d0f5;
-    color: #581985;
-}
-
-
 /* Login */
 
 .btn-login {

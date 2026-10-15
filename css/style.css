@@ -119,29 +119,38 @@ a {
     outline-offset: 3px;
 }
 
-/* Botão de perfil */
+/* ========================================
+   LOGIN BUTTON
+   ======================================== */
 
 .navbar .btn-login {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+
+    width: 42px;
+    height: 42px;
     margin-left: 0.5rem;
     padding: 0;
-    color: #7426AA;
-    background-color: #f0e4fa;
+
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+
     border: none;
-    border-radius: 12px;
-    font-size: 24px;
+    border-radius: 50%;
+
+    font-size: 1.25rem;
     line-height: 1;
     text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .navbar .btn-login:hover {
-    color: #581985;
-    background-color: #e5d0f5;
+    background-color: #581985;
+    color: #ffffff;
 }
 
 .navbar .btn-login i {
