@@ -59,6 +59,6 @@ Este é um projeto académico e algumas funcionalidades são apenas demonstrativ
 
 ---
 
-**CESAE Digital Lisboa | Software Developer | Grupo 2 | 2026**
+### CESAE Digital Lisboa | Software Developer | Grupo 2 | 2026
 
 *Este é um projeto académico e não o website oficial do CESAE Digital.*
